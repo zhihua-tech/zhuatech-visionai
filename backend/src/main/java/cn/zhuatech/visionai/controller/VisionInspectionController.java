@@ -18,4 +18,10 @@ public class VisionInspectionController {
     public ApiResponse<VisionInspectionService.Result> inspect(@Valid @RequestBody VisionInspectionService.Request request) {
         return ApiResponse.ok("视觉质检判定完成", service.inspect(request));
     }
+
+    @PostMapping("/monitor-drift")
+    public ApiResponse<VisionInspectionService.DriftResult> monitorDrift(
+        @Valid @RequestBody VisionInspectionService.DriftRequest request) {
+        return ApiResponse.ok("视觉模型漂移诊断完成", service.monitorDrift(request));
+    }
 }

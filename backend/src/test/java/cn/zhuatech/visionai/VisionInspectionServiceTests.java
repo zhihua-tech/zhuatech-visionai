@@ -22,4 +22,14 @@ class VisionInspectionServiceTests {
         assertThat(result.decision()).isEqualTo("REVIEW");
         assertThat(result.findings()).anyMatch(item -> item.contains("人工复核"));
     }
+
+    @Test void recommendsRetrainingWhenQualitySignalsDriftTogether() {
+        var result = service.monitorDrift(new VisionInspectionService.DriftRequest(
+            "surface-v3.2", new BigDecimal("0.018"), new BigDecimal("0.065"),
+            new BigDecimal("0.94"), new BigDecimal("0.82"), 200, 38,
+            new BigDecimal("0.02"), new BigDecimal("0.05"), new BigDecimal("0.10")));
+        assertThat(result.driftStatus()).isEqualTo("RETRAIN");
+        assertThat(result.driftScore()).isEqualTo(100);
+        assertThat(result.recommendation()).contains("再训练");
+    }
 }

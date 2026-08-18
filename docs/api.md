@@ -10,6 +10,7 @@
 | GET | `/api/shopfloor/dashboard` | 视觉质检运营台 |
 | POST | `/api/shopfloor/work-orders/{id}/reports` | 提交处理反馈 |
 | POST | `/api/ai/vision/inspect` | 视觉检测结果、质量门禁与人工复核路由 |
+| POST | `/api/ai/vision/monitor-drift` | 对比缺陷率、置信度与人工分歧的模型漂移诊断 |
 | POST | `/api/shopfloor/ai-risk-assessment` | AI 功能上线风险初筛 |
 
 除登录外均需 `Authorization: Bearer <token>`。社区演示实现不调用外部模型，不需要 API Key。
