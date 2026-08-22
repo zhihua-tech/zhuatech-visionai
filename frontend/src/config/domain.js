@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'VISIONAI',systemName:'知华机器视觉质检平台',englishName:'AI VISUAL INSPECTION',theme:{primary:'#4b556b',dark:'#263041',accent:'#d09246'},
  workspace:'质量中心 / 视觉质量组',fieldWorkspace:'二号工厂 / 终检工位',period:'2026-08-15 · 生产实时',liveText:'工位状态于 10:38 更新',fieldContextLabel:'当前批次',fieldContext:'LOT-260815-A17',fieldUser:'叶宁',fieldRole:'视觉质检员',adminUser:'顾清',adminRole:'质量平台主管',
