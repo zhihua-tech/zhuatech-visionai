@@ -6,9 +6,15 @@ import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class VisionInspectionServiceTests {
     private final VisionInspectionService service = new VisionInspectionService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void blocksCriticalDefect() {
         var result = service.inspect(new VisionInspectionService.Request("VI-001", "surface-v3",
             new BigDecimal("0.97"), 3, 1, new BigDecimal("0.018")));
@@ -16,6 +22,9 @@ class VisionInspectionServiceTests {
         assertThat(result.routeTo()).isEqualTo("隔离区");
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void sendsLowConfidenceResultToReview() {
         var result = service.inspect(new VisionInspectionService.Request("VI-002", "surface-v3",
             new BigDecimal("0.72"), 0, 0, BigDecimal.ZERO));
@@ -23,6 +32,9 @@ class VisionInspectionServiceTests {
         assertThat(result.findings()).anyMatch(item -> item.contains("人工复核"));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test void recommendsRetrainingWhenQualitySignalsDriftTogether() {
         var result = service.monitorDrift(new VisionInspectionService.DriftRequest(
             "surface-v3.2", new BigDecimal("0.018"), new BigDecimal("0.065"),

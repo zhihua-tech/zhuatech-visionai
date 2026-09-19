@@ -12,8 +12,14 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class VisionInspectionService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result inspect(Request request) {
         boolean hardBlock = request.criticalDefectCount() > 0
             || request.defectAreaRate().compareTo(new BigDecimal("0.050")) >= 0;
@@ -29,6 +35,9 @@ public class VisionInspectionService {
             request.totalDefectCount(), findings, true);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public DriftResult monitorDrift(DriftRequest request) {
         BigDecimal defectRateShift = request.currentDefectRate().subtract(request.baselineDefectRate());
         BigDecimal confidenceDrop = request.baselineConfidence().subtract(request.currentConfidence()).max(BigDecimal.ZERO);
@@ -58,13 +67,22 @@ public class VisionInspectionService {
             disagreementRate.movePointRight(2).setScale(2, RoundingMode.HALF_UP), signals, recommendation);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String inspectionNo, @NotBlank String modelVersion,
                           @DecimalMin("0") @DecimalMax("1") BigDecimal modelConfidence,
                           @Min(0) int totalDefectCount, @Min(0) int criticalDefectCount,
                           @DecimalMin("0") @DecimalMax("1") BigDecimal defectAreaRate) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String inspectionNo, String decision, String routeTo,
                          BigDecimal confidence, int defectCount,
                          List<String> findings, boolean humanOverrideAllowed) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record DriftRequest(@NotBlank String modelVersion,
                                @DecimalMin("0") @DecimalMax("1") BigDecimal baselineDefectRate,
                                @DecimalMin("0") @DecimalMax("1") BigDecimal currentDefectRate,
@@ -74,6 +92,9 @@ public class VisionInspectionService {
                                @DecimalMin("0") @DecimalMax("1") BigDecimal maximumDefectRateShift,
                                @DecimalMin("0") @DecimalMax("1") BigDecimal maximumConfidenceDrop,
                                @DecimalMin("0") @DecimalMax("1") BigDecimal maximumDisagreementRate) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record DriftResult(String modelVersion, int driftScore, String driftStatus,
                               BigDecimal defectRateShiftPoints, BigDecimal confidenceDropPoints,
                               BigDecimal disagreementRatePercent, List<String> signals,
