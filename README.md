@@ -1,5 +1,7 @@
 # ZhuaTech VisionAI
 
+[简体中文](README.md) | [English](README.en.md)
+
 ## 知华科技机器视觉质检平台社区源码版
 
 机器视觉负责快速发现异常，质量人员负责最终放行。ZhuaTech VisionAI 将工业相机、边缘推理、缺陷规则、人工复核与批次隔离组织为可追踪的质量工作流。
