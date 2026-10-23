@@ -1,5 +1,11 @@
 [简体中文](README.md) | **English**
 
+## 2026-10-23 update: Class-aware detection-box NMS
+
+Applies deterministic class-aware non-maximum suppression to supplied normalized model detections and records each suppressed box and its suppressor; no images or vision models are invoked.
+
+After signing in to the real backend, open the bottom-right business calculation tool to submit structured input, inspect calculated results and export complete JSON. The endpoint is `POST /api/workbench/detection-nms` with the existing JWT. Computation is implemented server-side; it does not query another user's records, persist business documents, approve transactions or invoke external models. See [algorithm, sample and test notes](docs/AI_WORKFLOW_UPGRADE_20261023.md).
+
 # ZhuaTech VisionAI
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise AI-assisted workflows with human governance.
