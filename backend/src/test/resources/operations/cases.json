@@ -1,0 +1,81 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "mappedX": "#320",
+      "mappedY": "#320",
+      "mappedWidth": "#64",
+      "mappedHeight": "#36",
+      "padY": "#140"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "boxX": "1800"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "boxY": "1000"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "boxWidth": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "sourceWidth": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "targetWidth": "1920",
+      "targetHeight": "1080"
+    },
+    "expected": {
+      "mappedX": "#960",
+      "padY": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "targetWidth": "1280",
+      "targetHeight": "360"
+    },
+    "expected": {
+      "mappedX": "#640",
+      "mappedY": "#180",
+      "padX": "#320"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "sourceWidth": "99991",
+      "sourceHeight": "1",
+      "targetWidth": "1",
+      "targetHeight": "1",
+      "boxX": "0.049995",
+      "boxY": "0",
+      "boxWidth": "1",
+      "boxHeight": "1"
+    },
+    "expected": {
+      "mappedX": "#0"
+    },
+    "error": false
+  }
+]

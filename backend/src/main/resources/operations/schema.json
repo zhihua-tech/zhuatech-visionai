@@ -1,0 +1,123 @@
+{
+  "slug": "visionai",
+  "title": "检测框Letterbox坐标映射",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "sourceWidth",
+      "label": "原图宽像素",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "100000"
+    },
+    {
+      "key": "sourceHeight",
+      "label": "原图高像素",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "100000"
+    },
+    {
+      "key": "targetWidth",
+      "label": "画布宽像素",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "100000"
+    },
+    {
+      "key": "targetHeight",
+      "label": "画布高像素",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "100000"
+    },
+    {
+      "key": "boxX",
+      "label": "检测框左坐标",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "boxY",
+      "label": "检测框上坐标",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "boxWidth",
+      "label": "检测框宽",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "boxHeight",
+      "label": "检测框高",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    }
+  ],
+  "columns": [
+    {
+      "key": "mappedX",
+      "label": "目标框左坐标"
+    },
+    {
+      "key": "mappedY",
+      "label": "目标框上坐标"
+    },
+    {
+      "key": "mappedWidth",
+      "label": "目标框宽"
+    },
+    {
+      "key": "mappedHeight",
+      "label": "目标框高"
+    },
+    {
+      "key": "padX",
+      "label": "水平边距"
+    },
+    {
+      "key": "padY",
+      "label": "垂直边距"
+    }
+  ],
+  "description": "将原图有效检测框映射到保持长宽比、居中填充的目标画布，返回框坐标及边距；不做目标识别或图像编辑。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "sourceWidth": "1920",
+        "sourceHeight": "1080",
+        "targetWidth": "640",
+        "targetHeight": "640",
+        "boxX": "960",
+        "boxY": "540",
+        "boxWidth": "192",
+        "boxHeight": "108"
+      }
+    ]
+  }
+}
